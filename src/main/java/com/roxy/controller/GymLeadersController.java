@@ -10,6 +10,9 @@ import java.util.List;
 import io.micronaut.http.annotation.Controller;
 // import io.micronaut.http.annotation.Delete;
 import io.micronaut.http.annotation.Get;
+import io.micronaut.http.annotation.Options;
+
+import io.micronaut.http.HttpResponse;
 // import io.micronaut.http.annotation.Post;
 // import io.micronaut.http.annotation.Put;
 import io.micronaut.scheduling.TaskExecutors;
@@ -29,5 +32,7 @@ public class GymLeadersController {
     public List<GymLeaders> index() {
         return gymLeadersRepository.findAll();
     }
+
+
 
 }
