@@ -3,7 +3,8 @@ package com.roxy.entity;
 import jakarta.persistence.Table;
 
 import java.io.Serializable;
-
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -11,6 +12,8 @@ import jakarta.persistence.Id;
 
 @Entity
 @Table(name = "users")
+@JsonSerialize
+@JsonDeserialize
 public class User implements Serializable {
 
     @Id
