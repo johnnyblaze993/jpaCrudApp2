@@ -1,10 +1,10 @@
 package com.roxy.controller;
 
-import java.util.List;
-import java.util.Optional;
-
 import com.roxy.entity.User;
 import com.roxy.repository.UserRepository;
+
+import java.util.List;
+import java.util.Optional;
 
 import io.micronaut.http.annotation.Body;
 import io.micronaut.http.annotation.Controller;
