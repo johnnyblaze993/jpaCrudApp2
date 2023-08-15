@@ -8,6 +8,7 @@ import java.util.List;
 
 // import io.micronaut.http.annotation.Body;
 import io.micronaut.http.annotation.Controller;
+import io.micronaut.http.server.cors.CrossOrigin;
 // import io.micronaut.http.annotation.Delete;
 import io.micronaut.http.annotation.Get;
 import io.micronaut.http.annotation.Options;
@@ -19,6 +20,8 @@ import io.micronaut.scheduling.TaskExecutors;
 import io.micronaut.scheduling.annotation.ExecuteOn;
 
 @ExecuteOn(TaskExecutors.IO)
+
+@CrossOrigin(allowedOrigins = "http://127.0.0.1/:5173")
 @Controller("/gymleaders")
 public class GymLeadersController {
 
@@ -32,7 +35,5 @@ public class GymLeadersController {
     public List<GymLeaders> index() {
         return gymLeadersRepository.findAll();
     }
-
-
 
 }
