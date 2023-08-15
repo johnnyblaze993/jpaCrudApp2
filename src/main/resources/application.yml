@@ -1,6 +1,21 @@
 micronaut:
   application:
     name: jpaCrudApp2
+  server:
+    cors:
+      enabled: true
+      configurations:
+        allowedHeaders:
+          - Content-Type
+        allowedMethods:
+          - GET
+          - POST
+          - DELETE
+        allowedOrigins:
+          - http://localhost:3000
+          - http://localhost:8080
+          - http://localhost:5173
+
 datasources:
   default:
     url: jdbc:postgresql://localhost:5432/crudTest
