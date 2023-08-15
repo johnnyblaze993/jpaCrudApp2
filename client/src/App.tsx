@@ -3,7 +3,7 @@ import "./App.css";
 
 function App() {
 	useEffect(() => {
-		fetch("http://127.0.0.1:8080/gymleaders", {
+		fetch("http://127.0.0.1:8080/users", {
 			headers: {
 				"Content-Type": "application/json",
 			},
