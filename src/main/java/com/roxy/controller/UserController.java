@@ -55,18 +55,18 @@ public class UserController {
         return userRepository.save(user);
     }
 
-    @Delete("/{id}")
-    public void deleteUser(Long id) throws Exception {
-        if (userRepository.existsById(id)) {
-            userRepository.deleteById(id);
-        } else {
-            /*
-             * For demo purposes, I am using Generic Exception.
-             * In a real scenario, you must
-             * implement custom exception handling.
-             */
-            throw new Exception("Id Not Found");
-        }
-    }
+    // @Delete("/{id}")
+    // public void deleteUser(Long id) throws Exception {
+    //     if (userRepository.existsById(id)) {
+    //         userRepository.deleteById(id);
+    //     } else {
+    //         /*
+    //          * For demo purposes, I am using Generic Exception.
+    //          * In a real scenario, you must
+    //          * implement custom exception handling.
+    //          */
+    //         throw new Exception("Id Not Found");
+    //     }
+    // }
 
 }
