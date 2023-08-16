@@ -5,16 +5,18 @@ micronaut:
     cors:
       enabled: true
       configurations:
-        allowedHeaders:
-          - Content-Type
-        allowedMethods:
-          - GET
-          - POST
-          - DELETE
-        allowedOrigins:
-          - http://127.0.0.1:3000
-          - http://127.0.0.1:8080
-          - http://127.0.0.1:5173
+        web:
+          allowed-headers:
+            - Content-Type
+            - Authorization
+          allowed-methods:
+            - GET
+            - POST
+            - PUT
+            - DELETE
+            - OPTIONS
+          allowed-origins:
+            - http://127.0.0.1:5173
 
 datasources:
   default:
